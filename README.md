@@ -111,7 +111,7 @@ So 1110 (14) will be zero filed from the left.<hr>
 _**Use && in a logical expression**_<br>
 && in a (logical) expression is just the C-style way to say and.<br>
 _**Use && for declaring rvalue references**_
-<br>auto mrSamberg = std::string{"Andy"};
+<br>auto mrSamberg = std::string{"Andy"};<br>
 mrSamberg represents an lvalue. It points to a specific place in the memory which identifies an object.
 On the other hand, what you can find on the right side std::string{"Andy"} is actually an rvalue.
 It's an expression that can't have a value assigned to, that's already the value itself.

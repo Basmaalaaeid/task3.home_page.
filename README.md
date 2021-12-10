@@ -109,7 +109,8 @@ It is the bitwise AND. Its an infix operator taking two numbers as inputs and do
 Here is an example. 14 is represented as 1110 as a binary number and 42 can be written as 101010.
 So 1110 (14) will be zero filed from the left.<hr>
 _**Use && in a logical expression**_<br>
-&& in a (logical) expression is just the C-style way to say and.<br>
+&& in a (logical) expression is just the C-style way to say and<br>
+  for(condition && condition)<br>.<br><hr>
 _**Use && for declaring rvalue references**_
 <br>auto mrSamberg = std::string{"Andy"};<br><br>
 mrSamberg represents an lvalue. It points to a specific place in the memory which identifies an object.

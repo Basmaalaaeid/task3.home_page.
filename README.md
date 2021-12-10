@@ -89,7 +89,7 @@ It cannot be a bit field, nor can it have the storage class register.
 If the operand is a lvalue or function, the resulting type is a pointer to the expression type.
 For example, if the expression has type int, the result is a pointer to an object having type int.<hr>
 
-_**Use & to declare a reference to a type**_<br>
+_**Use & to declare a reference to a type.**_<br>
 If you use & in the left-hand side of a variable declaration, it means that you expect to have a reference to the declared type.
 It can be used in any type of declarations (local variables, class members, method parameters).
 <br>std::string mrSamberg("Andy");<br>

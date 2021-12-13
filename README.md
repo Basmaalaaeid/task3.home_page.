@@ -8,7 +8,7 @@ By enforcing your documentation, the const keyword provides guarantees to your u
 For instance, const references allow you to specify that the data referred to won't be changed;
 this means that you can use const references as a simple and immediate way of improving performance for any function that currently takes objects by value without having to worry that your function might modify the data. Even if it does,
 the compiler will prevent the code from compiling and alert you to the problem.
-On the other hand, if you didn't use const references, you'd have no easy way to ensure that your data wasn't modified.<hr>
+On the other hand, if you didn't use const references, you'd have no easy way to ensure that your data wasn't modified. <hr>
   
 _**const variables**_ ex: <br>
   #include <iostream><br>
@@ -37,7 +37,8 @@ int main()<br>
     char *const ptr = &a;<br>
     printf( "Value pointed to by ptr: %c\n", *ptr);<br>
     printf( "Address ptr is pointing to: %d\n\n", ptr);<br>
-}<hr><br>
+}
+  <hr><br>
 _**Const functions**_<br>
 In C++, however, there's the issue of classes with methods. If you have a const object, you don't want to call methods that can change the object, so you need a way of letting the compiler know which methods can be safely called. These methods are called "const functions", and are the only functions that can be called on a const object. Note, by the way, that only member methods make sense as const methods. Remember that in C++, every method of an object receives an implicit this pointer to the object; const methods effectively receive a const this pointer.
 
@@ -218,8 +219,9 @@ int main()<br>
     std::cout << "------------------------" << std::endl;<br>
 
     const int* pConstVec = constVec.data();<br>
-}<hr><br>
-_**Const iterators**_
+}
+  <hr><br>
+_**Const iterators**_<br>
 As we've already seen, in order to enforce const-ness, C++ requires that const functions return only const pointers and references.
 Since iterators can also be used to modify the underlying collection,
 when an STL collection is declared const, then any iterators used over the collection must be const iterators.
@@ -239,22 +241,26 @@ itr != end;<br>
 {<br>
 // just print out the values...<br>
 std::cout<< *itr <<std::endl;<br>
-}<hr><br>
+}
+  <hr><br>
 
 Const casts look like regular typecasts in C++, except that they can only be used for casting away constness (or volatile-ness)
-but not converting between types or casting down a class hierarchy.<hr>
+but not converting between types or casting down a class hierarchy.
+  <hr>
 
 _**usages of & operator:**_<br>
 The & operator yields a pointer to its operand. The operand must be a lvalue, a function designator, or a qualified name.
 It cannot be a bit field, nor can it have the storage class register.
 If the operand is a lvalue or function, the resulting type is a pointer to the expression type.
-For example, if the expression has type int, the result is a pointer to an object having type int.<hr>
+For example, if the expression has type int, the result is a pointer to an object having type int.
+  <hr>
 
 _**Use & to declare a reference to a type.**_<br>
 If you use & in the left-hand side of a variable declaration, it means that you expect to have a reference to the declared type.
 It can be used in any type of declarations (local variables, class members, method parameters).
 <br>std::string mrSamberg("Andy");<br>
-std::string& theBoss = mrSamberg<hr><br>
+std::string& theBoss = mrSamberg
+  <hr><br>
 
 _**Use & to get the address of a variable**_<br>
 The meaning of & changes if you use it in the right-hand side of an expression. In fact, if you use it on the left-hand side, it must be used in a variable declaration,
@@ -281,7 +287,8 @@ int main()<br>
   cout << "ref = " << ref << endl ;<br>
   
   return 0;<br>
-}<br><hr>
+}
+  <br><hr>
   _**Use & as a bitwise operator**_<br>
 It is the bitwise AND. Its an infix operator taking two numbers as inputs and doing an AND on each of the bit pairs of the inputs.
 Here is an example. 14 is represented as 1110 as a binary number and 42 can be written as 101010.
@@ -322,13 +329,15 @@ int main() {<br>
     cout << ((a == 5) && (a < b)) << endl;<br>
 
     return 0;<br>
-}<br><hr>
+}
+  <br><hr>
 _**Use && for declaring rvalue references**_
 <br>auto mrSamberg = std::string{"Andy"};<br><br>
 mrSamberg represents an lvalue. It points to a specific place in the memory which identifies an object.
 On the other hand, what you can find on the right side <br>std::string{"Andy"} <br>is actually an rvalue.
 It's an expression that can't have a value assigned to, that's already the value itself.
-It can be only on the right-hand side of an assignment operator.<hr>
+It can be only on the right-hand side of an assignment operator.
+  <hr>
 
 _**Use & or && for function overloading**_<br>
 Since C++11 you can use both the single and double ampersands as part of the function signature,

@@ -11,7 +11,8 @@ the compiler will prevent the code from compiling and alert you to the problem.
 On the other hand, if you didn't use const references, you'd have no easy way to ensure that your data wasn't modified. 
   
 _**const variables**_ ex: <br>
-  #include <iostream><br>
+  #include <iostream> 
+  <br>
 using namespace std;<br>
 
 int main() {<br>
@@ -66,7 +67,7 @@ int main() {<br>
 }<br><br>
 Note that just because a function is declared const that doesn't prohibit non-const functions from using it; the rule is this:
 Const functions can always be called
-Non-const functions can only be called by non-const objects<br>
+Non-const functions can only be called by non-const objects.<br>
 _**Const Overloading**_<br>
 In large part because const functions cannot return non-const references to an objects' data, there are many times where it might seem appropriate to have both const and non-const versions of a function.
 For instance, if you are returning a reference to some member data (usually not a good thing to do, but there are exceptions), then you may want to have a non-const version of the function that returns a non-const reference:<br>

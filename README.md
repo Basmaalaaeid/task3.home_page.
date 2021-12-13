@@ -66,7 +66,7 @@ int main() {<br>
 }<br><br>
 Note that just because a function is declared const that doesn't prohibit non-const functions from using it; the rule is this:
 Const functions can always be called
-Non-const functions can only be called by non-const objects<hr><br>
+Non-const functions can only be called by non-const objects<br>
 _**Const Overloading**_<br>
 In large part because const functions cannot return non-const references to an objects' data, there are many times where it might seem appropriate to have both const and non-const versions of a function.
 For instance, if you are returning a reference to some member data (usually not a good thing to do, but there are exceptions), then you may want to have a non-const version of the function that returns a non-const reference:<br>

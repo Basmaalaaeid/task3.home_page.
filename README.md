@@ -11,10 +11,6 @@ the compiler will prevent the code from compiling and alert you to the problem.
 On the other hand, if you didn't use const references, you'd have no easy way to ensure that your data wasn't modified. 
   
 _**const variables**_ ex: <br>
-  #include <iostream> 
-  <br>
-using namespace std;<br>
-
 int main() {<br>
   const int myNum = 15;<br>
   myNum = 10;<br>
